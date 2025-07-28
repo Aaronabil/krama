@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Lock, Eye, EyeOff } from 'lucide-react'
+import { Mail, Lock, Eye, EyeOff, XCircle } from 'lucide-react'
 import { Button } from '../ui/Button'
 import { useAuth } from '../../contexts/AuthContext'
 
@@ -47,7 +47,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onToggleMode }) => {
       className="w-full max-w-md mx-auto"
     >
       <div className="text-center mb-8">
-        <div className="text-6xl mb-4">🦜</div>
+        <div className="text-6xl mb-4">🐬</div>
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Welcome Back!</h1>
         <p className="text-gray-600">Continue your language learning journey</p>
       </div>
@@ -57,9 +57,9 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onToggleMode }) => {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-lg"
+            className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-lg flex items-center"
           >
-            {error}
+            <XCircle className="h-5 w-5 text-red-500 mr-2" />{error}
           </motion.div>
         )}
 

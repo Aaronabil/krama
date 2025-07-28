@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Lock, User, Eye, EyeOff } from 'lucide-react'
+import { Mail, Lock, User, Eye, EyeOff, XCircle, CheckCircle } from 'lucide-react'
 import { Button } from '../ui/Button'
 import { useAuth } from '../../contexts/AuthContext'
+import LoadingThreeDotsJumping from '../ui/Loading'
 
 interface RegisterFormProps {
   onToggleMode: () => void
@@ -38,8 +39,8 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleMode }) => {
       return
     }
 
-    if (formData.password.length < 6) {
-      setError('Password must be at least 6 characters')
+    if (formData.password.length < 8) {
+      setError('Password must be at least 8 characters')
       setLoading(false)
       return
     }
@@ -69,7 +70,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleMode }) => {
       className="w-full max-w-md mx-auto"
     >
       <div className="text-center mb-8">
-        <div className="text-6xl mb-4">🦜</div>
+        <div className="text-6xl mb-4">🐬</div>
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Join Basakrama!</h1>
         <p className="text-gray-600">Start learning Indonesian regional languages</p>
       </div>
@@ -80,18 +81,18 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleMode }) => {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg"
+            className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg flex items-center"
           >
-            {success}
+            <CheckCircle className="h-5 w-5 text-green-500 mr-2" />{success}
           </motion.div>
         )}
         {error && (
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-lg"
+            className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-lg flex items-center"
           >
-            {error}
+            <XCircle className="h-5 w-5 text-red-500 mr-2" />{error}
           </motion.div>
         )}
 
@@ -185,7 +186,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleMode }) => {
           className="w-full"
           disabled={loading}
         >
-          {loading ? 'Creating account...' : 'Create Account'}
+          {loading ? <LoadingThreeDotsJumping /> : 'Create Account'}
         </Button>
 
         <div className="text-center">

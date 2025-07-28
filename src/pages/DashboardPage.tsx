@@ -35,7 +35,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onNavigate }) => {
       >
         {/* Welcome Header */}
         <div className="text-center mb-12">
-          <div className="text-6xl mb-4">🦜</div>
+          <div className="text-6xl mb-4">🐬</div>
           <h1 className="text-4xl font-bold text-gray-900 mb-2">
             Welcome back, Language Explorer!
           </h1>

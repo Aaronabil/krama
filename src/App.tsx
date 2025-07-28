@@ -24,7 +24,7 @@ const AppContent: React.FC = () => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="text-6xl mb-4 animate-bounce">🦜</div>
+          <div className="text-6xl mb-4 animate-bounce">🐬</div>
           <div className="text-xl font-semibold text-gray-700">Loading Basakrama...</div>
         </div>
       </div>

@@ -26,7 +26,7 @@ export const Navigation: React.FC<NavigationProps> = ({ activeTab, onTabChange }
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
-              <div className="text-2xl font-bold text-green-600">🦜 Basakrama</div>
+              <div className="text-2xl font-bold text-green-600">🐬 Basakrama</div>
             </div>
           </div>
           

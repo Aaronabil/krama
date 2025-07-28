@@ -67,7 +67,7 @@ export const javaneseBasicLessons: Lesson[] = [
         type: 'drag_drop',
         question: 'Match the Javanese greeting with its meaning',
         options: ['Sugeng rawuh', 'Welcome'],
-        correct_answer: 'Sugeng rawuh = Welcome',
+        correct_answer: 'Welcome',
         translation: 'Welcome'
       }
     ]
@@ -97,7 +97,7 @@ export const javaneseBasicLessons: Lesson[] = [
         options: ['Bapak', 'Ibu', 'Adhik', 'Kakang'],
         correct_answer: 'Bapak',
         translation: 'Father'
-      }
+      },
     ]
   }
 ]
