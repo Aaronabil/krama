@@ -5,6 +5,7 @@ import { StatsCard } from '../components/dashboard/StatsCard'
 import { LanguageCard } from '../components/dashboard/LanguageCard'
 import { useGame } from '../contexts/GameContext'
 import { languages } from '../data/mockData'
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 interface DashboardPageProps {
   onNavigate: (page: string, data?: any) => void
@@ -35,7 +36,13 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onNavigate }) => {
       >
         {/* Welcome Header */}
         <div className="text-center mb-12">
-          <div className="text-6xl mb-4">🐬</div>
+          <div className="text-6xl mb-4 w-[200px] h-[100px] mx-auto">
+          <DotLottieReact
+      src="https://lottie.host/2fbea4bc-c867-4c9e-9238-3ab6bfafb291/qwrBbaSo6p.lottie"
+      loop
+      autoplay
+    />
+          </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-2">
             Welcome back, Language Explorer!
           </h1>

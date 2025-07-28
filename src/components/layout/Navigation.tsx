@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Home, BookOpen, Trophy, Settings, LogOut, User } from 'lucide-react'
 import { useAuth } from '../../contexts/AuthContext'
 import { useGame } from '../../contexts/GameContext'
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 interface NavigationProps {
   activeTab: string
@@ -26,7 +27,15 @@ export const Navigation: React.FC<NavigationProps> = ({ activeTab, onTabChange }
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
-              <div className="text-2xl font-bold text-green-600">🐬 Basakrama</div>
+              <div className="flex items-center">
+                <DotLottieReact
+                  src="https://lottie.host/2fbea4bc-c867-4c9e-9238-3ab6bfafb291/qwrBbaSo6p.lottie"
+                  loop
+                  autoplay
+                  className="w-[70px] h-[40px]"
+                />
+                <span className="text-2xl font-bold text-green-600 mr-10">Basakrama</span>
+              </div>
             </div>
           </div>
           

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Mail, Lock, Eye, EyeOff, XCircle } from 'lucide-react'
 import { Button } from '../ui/Button'
 import { useAuth } from '../../contexts/AuthContext'
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 interface LoginFormProps {
   onToggleMode: () => void
@@ -47,7 +48,13 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onToggleMode }) => {
       className="w-full max-w-md mx-auto"
     >
       <div className="text-center mb-8">
-        <div className="text-6xl mb-4">🐬</div>
+        <div className="text-6xl mb-4 w-[200px] h-[100px] mx-auto">
+        <DotLottieReact
+        src="/lottie/Catinarocket.lottie"
+        loop
+        autoplay
+        />
+        </div>
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Welcome Back!</h1>
         <p className="text-gray-600">Continue your language learning journey</p>
       </div>
@@ -114,9 +121,11 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onToggleMode }) => {
         >
           {loading ? 'Signing in...' : 'Sign In'}
         </Button>
-        <div className="text-center">
-        <p className="text-gray-600">Or</p>
-        </div>
+        <div className="flex items-center gap-4 my-4">
+  <hr className="flex-grow border-gray-300" />
+  <span className="text-gray-600">or</span>
+  <hr className="flex-grow border-gray-300" />
+</div>
         <Button
           type="button"
           variant="outline"

@@ -24,7 +24,7 @@ export interface Lesson {
   language_id: string
   title: string
   description: string
-  level: 'beginner' | 'intermediate' | 'advanced'
+  level: 'Beginner' | 'Intermediate' | 'Advanced'
   order: number
   xp_reward: number
   questions: Question[]

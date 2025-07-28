@@ -4,6 +4,7 @@ import { Mail, Lock, User, Eye, EyeOff, XCircle, CheckCircle } from 'lucide-reac
 import { Button } from '../ui/Button'
 import { useAuth } from '../../contexts/AuthContext'
 import LoadingThreeDotsJumping from '../ui/Loading'
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 interface RegisterFormProps {
   onToggleMode: () => void
@@ -70,7 +71,13 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleMode }) => {
       className="w-full max-w-md mx-auto"
     >
       <div className="text-center mb-8">
-        <div className="text-6xl mb-4">🐬</div>
+        <div className="text-6xl mb-4 w-[200px] h-[100px] mx-auto">
+        <DotLottieReact
+      src="https://lottie.host/cf5694da-6f88-4889-a101-30366f20eb33/EQ359fLivq.lottie"
+      loop
+      autoplay
+    />
+        </div>
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Join Basakrama!</h1>
         <p className="text-gray-600">Start learning Indonesian regional languages</p>
       </div>

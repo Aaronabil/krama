@@ -6,7 +6,7 @@ import { QuestionCard } from '../components/learning/QuestionCard'
 import { Button } from '../components/ui/Button'
 import { ProgressBar } from '../components/ui/ProgressBar'
 import { useGame } from '../contexts/GameContext'
-import { languages, javaneseBasicLessons } from '../data/mockData'
+import { languages, javaneseBasicLessons, sundaneseBasicLessons, batakBasicLessons, minangBasicLessons } from '../data/mockData'
 import { Lesson, Question } from '../types'
 
 interface LearnPageProps {
@@ -26,7 +26,31 @@ export const LearnPage: React.FC<LearnPageProps> = ({ initialData, onNavigate })
   const { userStats, completeLesson } = useGame()
 
   const currentLanguageData = languages.find(l => l.id === selectedLanguage)
-  const lessons = javaneseBasicLessons // In real app, filter by language
+  
+  const getLessonsByLanguage = (languageId: string) => {
+    switch (languageId) {
+      case '1': // Javanese
+        return javaneseBasicLessons
+      case '2': // Sundanese
+        return sundaneseBasicLessons
+      case '3':
+        return batakBasicLessons
+      default:
+        return minangBasicLessons // fallback
+    }
+  }
+
+  const lessons = getLessonsByLanguage(selectedLanguage)
+
+  useEffect(() => {
+    // Reset current lesson when language changes
+    setCurrentLesson(null)
+    setCurrentQuestionIndex(0)
+    setUserAnswers([])
+    setShowResult(false)
+    setLessonComplete(false)
+    setScore(0)
+  }, [selectedLanguage])
 
   const handleStartLesson = (lesson: Lesson) => {
     setCurrentLesson(lesson)
@@ -56,7 +80,7 @@ export const LearnPage: React.FC<LearnPageProps> = ({ initialData, onNavigate })
       } else {
         // Lesson complete
         const finalScore = isCorrect ? score + 1 : score
-        completeLesson(currentLesson!.id, finalScore)
+        completeLesson(`${selectedLanguage}-${currentLesson!.order}`, finalScore)
         setLessonComplete(true)
       }
     }, 2000)
@@ -82,6 +106,11 @@ export const LearnPage: React.FC<LearnPageProps> = ({ initialData, onNavigate })
     if (lessonOrder === 1) return false
     return !userStats.completedLessons.includes(`${selectedLanguage}-${lessonOrder - 1}`)
   }
+
+  const lessonsWithCompletion = lessons.map((lesson) => ({
+    ...lesson,
+    is_completed: userStats.completedLessons.includes(`${selectedLanguage}-${lesson.order}`)
+  }))
 
   if (currentLesson && !lessonComplete) {
     const currentQuestion = currentLesson.questions[currentQuestionIndex]
@@ -210,7 +239,7 @@ export const LearnPage: React.FC<LearnPageProps> = ({ initialData, onNavigate })
 
         {/* Lessons Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {lessons.map((lesson, index) => (
+          {lessonsWithCompletion.map((lesson, index) => (
             <motion.div
               key={lesson.id}
               initial={{ opacity: 0, y: 20 }}
