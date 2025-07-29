@@ -55,8 +55,8 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onToggleMode }) => {
         autoplay
         />
         </div>
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">Welcome Back!</h1>
-        <p className="text-gray-600">Continue your language learning journey</p>
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">A fun and enjoyable way to learn!</h1>
+        <p className="text-gray-600">Start your language learning journey</p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Volume2, CheckCircle, XCircle } from 'lucide-react'
 import { Card } from '../ui/Card'
@@ -20,6 +20,18 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
 }) => {
   const [selectedAnswer, setSelectedAnswer] = useState('')
   const [draggedItems, setDraggedItems] = useState<string[]>([])
+
+  const correctAudio = useRef<HTMLAudioElement | null>(null)
+  const incorrectAudio = useRef<HTMLAudioElement | null>(null)
+
+  useEffect(() => {
+    if (!userAnswer) return
+    if (userAnswer === question.correct_answer) {
+      correctAudio.current?.play()
+    } else {
+      incorrectAudio.current?.play()
+    }
+  }, [userAnswer, question.correct_answer])
 
   const handleMultipleChoice = (answer: string) => {
     if (showResult) return
@@ -144,9 +156,6 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
     <Card className="p-8 max-w-2xl mx-auto">
       <div className="mb-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">{question.question}</h2>
-        {question.translation && (
-          <p className="text-gray-600 italic">"{question.translation}"</p>
-        )}
         {question.audio_url && (
           <Button
             variant="ghost"
@@ -204,6 +213,8 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
           )}
         </motion.div>
       )}
+      <audio ref={correctAudio} src="/audio/correctsound.mp3" />
+      <audio ref={incorrectAudio} src="/audio/incorrect.mp3" />
     </Card>
   )
 }

@@ -14,7 +14,7 @@ export interface Language {
   id: string
   name: string
   code: string
-  flag: string
+  pulau: string
   description: string
   total_lessons: number
 }
@@ -39,7 +39,6 @@ export interface Question {
   correct_answer: string
   audio_url?: string
   image_url?: string
-  translation: string
 }
 
 export interface UserProgress {

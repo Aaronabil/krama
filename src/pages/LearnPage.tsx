@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowLeft, CheckCircle } from 'lucide-react'
 import { LessonCard } from '../components/learning/LessonCard'
@@ -8,6 +8,7 @@ import { ProgressBar } from '../components/ui/ProgressBar'
 import { useGame } from '../contexts/GameContext'
 import { languages, javaneseBasicLessons, sundaneseBasicLessons, batakBasicLessons, minangBasicLessons } from '../data/mockData'
 import { Lesson, Question } from '../types'
+import { DotLottieReact } from '@lottiefiles/dotlottie-react'
 
 interface LearnPageProps {
   initialData?: { languageId: string }
@@ -22,8 +23,46 @@ export const LearnPage: React.FC<LearnPageProps> = ({ initialData, onNavigate })
   const [showResult, setShowResult] = useState(false)
   const [lessonComplete, setLessonComplete] = useState(false)
   const [score, setScore] = useState(0)
+  const [showStreakPopup, setShowStreakPopup] = useState(false)
+  const [prevStreak, setPrevStreak] = useState(0)
 
   const { userStats, completeLesson } = useGame()
+
+  const congratsAudio = useRef<HTMLAudioElement | null>(null)
+
+  useEffect(() => {
+    if (lessonComplete) {
+      congratsAudio.current?.play()
+    }
+  }, [lessonComplete])
+
+  // 1. Deteksi streak naik
+  useEffect(() => {
+    if (lessonComplete && userStats.streak > prevStreak) {
+      const today = new Date().toISOString().split('T')[0] // format: YYYY-MM-DD
+      const lastStreakPopup = localStorage.getItem('lastStreakPopupDate')
+
+      if (lastStreakPopup !== today) {
+        setShowStreakPopup(true)
+        setPrevStreak(userStats.streak)
+        localStorage.setItem('lastStreakPopupDate', today)
+      } else {
+        setPrevStreak(userStats.streak)
+      }
+    }
+    if (userStats.streak < prevStreak) {
+      setPrevStreak(userStats.streak)
+    }
+    // eslint-disable-next-line
+  }, [lessonComplete, userStats.streak])
+
+  // 2. Timer untuk menghilangkan popup
+  useEffect(() => {
+    if (showStreakPopup) {
+      const timer = setTimeout(() => setShowStreakPopup(false), 5000)
+      return () => clearTimeout(timer)
+    }
+  }, [showStreakPopup])
 
   const currentLanguageData = languages.find(l => l.id === selectedLanguage)
   
@@ -112,6 +151,21 @@ export const LearnPage: React.FC<LearnPageProps> = ({ initialData, onNavigate })
     is_completed: userStats.completedLessons.includes(`${selectedLanguage}-${lesson.order}`)
   }))
 
+  const lottieAnimations = [
+    "https://lottie.host/57628413-d7ca-42b2-a454-ed7145315e94/vEPVEw0nui.lottie",
+    "https://lottie.host/d3a6b51e-96b8-4933-8ca5-0ca5a6d9fedb/xee0KmTJ1m.lottie"
+  ]
+
+  // Pilih random hanya saat lessonComplete berubah menjadi true
+  const [selectedLottie, setSelectedLottie] = useState(lottieAnimations[0])
+
+  useEffect(() => {
+    if (lessonComplete) {
+      const randomIndex = Math.floor(Math.random() * lottieAnimations.length)
+      setSelectedLottie(lottieAnimations[randomIndex])
+    }
+  }, [lessonComplete])
+
   if (currentLesson && !lessonComplete) {
     const currentQuestion = currentLesson.questions[currentQuestionIndex]
     const progress = ((currentQuestionIndex + 1) / currentLesson.questions.length) * 100
@@ -167,7 +221,13 @@ export const LearnPage: React.FC<LearnPageProps> = ({ initialData, onNavigate })
           animate={{ opacity: 1, scale: 1 }}
           className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full mx-4 text-center"
         >
-          <div className="text-6xl mb-4">🎉</div>
+          <div className="text-6xl mb-4 w-[250px] h-[150px] mx-auto">
+          <DotLottieReact
+          src={selectedLottie}
+          loop
+          autoplay
+        />
+          </div>
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Lesson Complete!</h2>
           <p className="text-gray-600 mb-6">Great job completing "{currentLesson!.title}"</p>
           
@@ -201,6 +261,7 @@ export const LearnPage: React.FC<LearnPageProps> = ({ initialData, onNavigate })
             </Button>
           </div>
         </motion.div>
+        <audio ref={congratsAudio} src="/audio/congrats.mp3" />
       </div>
     )
   }
@@ -231,7 +292,7 @@ export const LearnPage: React.FC<LearnPageProps> = ({ initialData, onNavigate })
                     : 'text-gray-600 hover:bg-gray-100'
                 }`}
               >
-                {language.flag} {language.name}
+                {language.pulau} {language.name}
               </button>
             ))}
           </div>
@@ -267,6 +328,32 @@ export const LearnPage: React.FC<LearnPageProps> = ({ initialData, onNavigate })
           <p className="text-gray-600">We're working on adding more content to help you master {currentLanguageData?.name}</p>
         </motion.div>
       </motion.div>
+
+      {/* Popup Streak Animation */}
+      <AnimatePresence>
+          {showStreakPopup && (
+            <motion.div
+              className="fixed inset-0 flex items-center justify-center z-50 pointer-events-none"
+              initial={{ opacity: 0, scale: 0.7 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.7 }}
+              transition={{ duration: 0.4, type: 'spring' }}
+            >
+              <div className="bg-white rounded-2xl shadow-2xl p-8 flex flex-col items-center">
+                <div className="text-6xl mb-2">
+                  <DotLottieReact
+                    src="https://lottie.host/9047f95e-58f5-41ed-b34b-a68488514bf8/6DxqV8CaB6.lottie"
+                    loop
+                    autoplay
+                    style={{ width: 120, height: 120 }}
+                  />
+                </div>
+                <div className="text-3xl font-bold text-orange-500">Streak {userStats.streak}!</div>
+                <div className="text-gray-600 mt-1">Keep it up!</div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
     </div>
   )
 }
