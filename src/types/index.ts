@@ -14,7 +14,7 @@ export interface Language {
   id: string
   name: string
   code: string
-  pulau: string
+  flag: string
   description: string
   total_lessons: number
 }

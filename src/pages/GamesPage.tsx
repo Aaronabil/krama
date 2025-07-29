@@ -158,7 +158,7 @@ export const GamesPage: React.FC<GamesPageProps> = ({ onNavigate }) => {
                     : 'text-gray-600 hover:bg-gray-100'
                 }`}
               >
-                {language.pulau} {language.name}
+                {language.flag} {language.name}
               </button>
             ))}
           </div>

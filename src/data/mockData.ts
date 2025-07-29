@@ -5,7 +5,7 @@ export const languages: Language[] = [
     id: '1',
     name: 'Javanese',
     code: 'jv',
-    pulau: 'Jawa',
+    flag: '🇮🇩',
     description: 'Learn the most widely spoken regional language in Indonesia',
     total_lessons: 25
   },
@@ -13,7 +13,7 @@ export const languages: Language[] = [
     id: '2',
     name: 'Sundanese',
     code: 'su',
-    pulau: 'Jawa',
+    flag: '🇮🇩',
     description: 'Discover the beautiful language of West Java',
     total_lessons: 20
   },
@@ -21,7 +21,7 @@ export const languages: Language[] = [
     id: '3',
     name: 'Batak',
     code: 'btk',
-    pulau: 'Sumatera',
+    flag: '🇮🇩',
     description: 'Explore the rich language of North Sumatra',
     total_lessons: 18
   },
@@ -29,7 +29,7 @@ export const languages: Language[] = [
     id: '4',
     name: 'Minang',
     code: 'min',
-    pulau: 'Sumatera',
+    flag: '🇮🇩',
     description: 'Learn the expressive language of West Sumatra',
     total_lessons: 22
   }
@@ -886,92 +886,10 @@ export const javaneseBasicLessons: Lesson[] = [
   {
     id: '10',
     language_id: '1',
-    title: 'Talk About Party',
-    description: 'Learn Javanese words for talk about party',
-    level: 'Advanced',
-    order: 10,
-    xp_reward: 25,
-    is_completed: false,
-    questions: [
-      {
-        id: '95',
-        type: 'multiple_choice',
-        question: 'How do you say "invitation" in Javanese?',
-        options: ['Sugeng', 'Ulang tahun', 'Undangan', 'Tumpengan'],
-        correct_answer: 'Undangan'
-      },
-      {
-        id: '96',
-        type: 'fill_blank',
-        question: 'Complete: "Aku oleh ___ pesta ulang tahun." (I got a birthday party invitation)',
-        options: ['tumpengan', 'undangan', 'bingkisan', 'gawean'],
-        correct_answer: 'undangan'
-      },
-      {
-        id: '97',
-        type: 'multiple_choice',
-        question: 'What does "ulang tahun" mean in Javanese?',
-        options: ['Birthday', 'Gift', 'Celebration', 'Food'],
-        correct_answer: 'Birthday'
-      },
-      {
-        id: '98',
-        type: 'fill_blank',
-        question: 'Complete: "Dheweke nganakake ___ ulang tahun." (He is holding a birthday party)',
-        options: ['gawe', 'gawean', 'pesta', 'oleh-oleh'],
-        correct_answer: 'pesta'
-      },
-      {
-        id: '99',
-        type: 'multiple_choice',
-        question: 'How do you say "cake" in Javanese?',
-        options: ['Tumpeng', 'Roti', 'Kue', 'Jajan pasar'],
-        correct_answer: 'Kue'
-      },
-      {
-        id: '100',
-        type: 'fill_blank',
-        question: 'Complete: "Ana ___ gedhe ing meja." (There is a big cake on the table)',
-        options: ['tumpeng', 'kue', 'sego', 'ayam'],
-        correct_answer: 'kue'
-      },
-      {
-        id: '101',
-        type: 'multiple_choice',
-        question: 'How do you say "gift" in Javanese?',
-        options: ['Bingkisan', 'Sandangan', 'Piringan', 'Tanduran'],
-        correct_answer: 'Bingkisan'
-      },
-      {
-        id: '102',
-        type: 'fill_blank',
-        question: 'Complete: "Aku nggawa ___ kanggo ulang tahune." (I brought a gift for the birthday)',
-        options: ['tumpeng', 'bingkisan', 'pesta', 'rokok'],
-        correct_answer: 'bingkisan'
-      },
-      {
-        id: '103',
-        type: 'multiple_choice',
-        question: 'What is the Javanese term for a traditional ceremonial meal often served at parties?',
-        options: ['Tumpeng', 'Klepon', 'Bakso', 'Kembang'],
-        correct_answer: 'Tumpeng'
-      },
-      {
-        id: '104',
-        type: 'fill_blank',
-        question: 'Complete: "Pestane diakhiri karo mangan ___ bareng-bareng." (The party ended with eating tumpeng together)',
-        options: ['tumpeng', 'sego', 'ayam', 'jajan'],
-        correct_answer: 'tumpeng'
-      }
-    ]
-  },
-  {
-    id: '11',
-    language_id: '1',
     title: 'Talking About Food Prices',
     description: 'Learn Javanese words for talking about food prices',
     level: 'Advanced',
-    order: 11,
+    order: 10,
     xp_reward: 25,
     is_completed: false,
     questions: [
@@ -1048,12 +966,12 @@ export const javaneseBasicLessons: Lesson[] = [
     ]
   },
   {
-    id: '12',
+    id: '11',
     language_id: '1',
     title: 'Commenting on Food and Drinks',
     description: 'Learn Javanese words for commenting food and drinks',
     level: 'Advanced',
-    order: 12,
+    order: 11,
     xp_reward: 25,
     is_completed: false,
     questions: [
@@ -1163,7 +1081,7 @@ export const javaneseBasicLessons: Lesson[] = [
         correct_answer: 'Deliciously sweet'
       }
     ]
-  }  
+  },
 ]
 
 export const sundaneseBasicLessons: Lesson[] = [
@@ -1467,12 +1385,12 @@ export const sundaneseBasicLessons: Lesson[] = [
     ]
   },
   {
-    id: '4',
+    id: '5',
     language_id: '2',
     title: 'Introduce the Family',
     description: 'Learn Sundanese words for introduce the family',
     level: 'Intermediate',
-    order: 4,
+    order: 5,
     xp_reward: 20,
     is_completed: false,
     questions: [
@@ -1580,6 +1498,787 @@ export const sundaneseBasicLessons: Lesson[] = [
           'Eta nini abdi'
         ],
         correct_answer: 'Eta adina abdi'
+      }
+    ]
+  },
+  {
+    id: '6',
+    language_id: '1',
+    title: 'Talking About Food',
+    description: 'Learn Sundanese words for talking about food',
+    level: 'Intermediate',
+    order: 6,
+    xp_reward: 20,
+    is_completed: false,
+    questions: [
+      {
+        id: '44',
+        type: 'multiple_choice',
+        question: 'How do you say "I am hungry" in Sundanese?',
+        options: ['Abdi lapar', 'Abdi dahar', 'Abdi haus', 'Abdi tuang'],
+        correct_answer: 'Abdi lapar',
+      },
+      {
+        id: '45',
+        type: 'multiple_choice',
+        question: 'What does "Kuring hoyong sangu jeung lauk" mean?',
+        options: [
+          'I like rice and fish',
+          'I cook rice and fish',
+          'I want rice and fish',
+          'I eat rice and chicken'
+        ],
+        correct_answer: 'I want rice and fish',
+      },
+      {
+        id: '46',
+        type: 'drag_drop',
+        question: 'Match "Abdi henteu tuang daging" with its meaning',
+        options: ['Abdi henteu tuang daging', 'I don’t eat meat'],
+        correct_answer: 'I don’t eat meat',
+      },
+      {
+        id: '47',
+        type: 'multiple_choice',
+        question: 'How do you say "This food is delicious" in Sundanese?',
+        options: ['Ieu dahareun raos pisan', 'Ieu kadaharan amis pisan', 'Ieu tuang amis', 'Ieu sangu seger'],
+        correct_answer: 'Ieu dahareun raos pisan',
+      },
+      {
+        id: '48',
+        type: 'multiple_choice',
+        question: 'What does "Hayang nyoba masakan Sunda" mean?',
+        options: [
+          'I like Sundanese food',
+          'I want to try Sundanese food',
+          'I always eat Sundanese food',
+          'I cook Sundanese food'
+        ],
+        correct_answer: 'I want to try Sundanese food',
+      },
+      {
+        id: '49',
+        type: 'drag_drop',
+        question: 'Match the Sundanese phrase with its English meaning',
+        options: ['Kumaha rasa na?', 'How does it taste?'],
+        correct_answer: 'How does it taste?',
+      },
+      {
+        id: '50',
+        type: 'multiple_choice',
+        question: 'How do you say "Don’t make it too spicy" in Sundanese?',
+        options: [
+          'Ulah teuing amis',
+          'Ulah teuing lada',
+          'Tong loba uyah',
+          'Tong seueur sangu'
+        ],
+        correct_answer: 'Ulah teuing lada',
+      },
+      {
+        id: '51',
+        type: 'multiple_choice',
+        question: 'What is the meaning of "Abdi teu resep kana hayam goreng"?',
+        options: [
+          'I don’t like fried chicken',
+          'I like eating fried chicken',
+          'I want to cook fried chicken',
+          'I bought fried chicken'
+        ],
+        correct_answer: 'I don’t like fried chicken',
+      },
+      {
+        id: '52',
+        type: 'drag_drop',
+        question: 'Match "Abdi bade masak ayeuna" with its meaning',
+        options: ['Abdi bade masak ayeuna', 'I will cook now'],
+        correct_answer: 'I will cook now',
+      },
+      {
+        id: '53',
+        type: 'multiple_choice',
+        question: 'How do you say "Let’s eat together" in Sundanese?',
+        options: [
+          'Hayu urang nginum babarengan',
+          'Mangga tuang sorangan',
+          'Hayu urang dahar bareng',
+          'Abdi hoyong tuang di bumi'
+        ],
+        correct_answer: 'Hayu urang dahar bareng',
+      }
+    ]
+  },
+  {
+    id: '7',
+    language_id: '1',
+    title: 'Asking for Directions',
+    description: 'Learn Sundanese words for asking for directions',
+    level: 'Intermediate',
+    order: 7,
+    xp_reward: 20,
+    is_completed: false,
+    questions: [
+      {
+        id: '54',
+        type: 'multiple_choice',
+        question: 'How do you say "Where is the market?" in Sundanese?',
+        options: ['Di mana pasar?', 'Ka pasar saha?', 'Pasar ka ditu?', 'Pasar kamana?'],
+        correct_answer: 'Di mana pasar?'
+      },
+      {
+        id: '55',
+        type: 'multiple_choice',
+        question: 'What does "Kumaha carana ka terminal?" mean?',
+        options: [
+          'How far is the terminal?',
+          'How to get to the terminal?',
+          'Where is the bus?',
+          'Do you go to the terminal?'
+        ],
+        correct_answer: 'How to get to the terminal?'
+      },
+      {
+        id: '56',
+        type: 'drag_drop',
+        question: 'Match the Sundanese phrase with its English meaning',
+        options: ['Lurus bae', 'Go straight'],
+        correct_answer: 'Go straight'
+      },
+      {
+        id: '57',
+        type: 'multiple_choice',
+        question: 'How do you say "Turn left" in Sundanese?',
+        options: ['Ka katuhu', 'Ka kénca', 'Ka luhur', 'Ka handap'],
+        correct_answer: 'Ka kénca'
+      },
+      {
+        id: '58',
+        type: 'multiple_choice',
+        question: 'What does "Tepi ka kantor pos?" mean?',
+        options: [
+          'Where is the post office?',
+          'How to mail this?',
+          'Is this a post office?',
+          'Did you go to the post office?'
+        ],
+        correct_answer: 'Where is the post office?'
+      },
+      {
+        id: '59',
+        type: 'drag_drop',
+        question: 'Match "Kade ulah lepat jalan" with its meaning',
+        options: ['Kade ulah lepat jalan', 'Be careful not to take the wrong way'],
+        correct_answer: 'Be careful not to take the wrong way'
+      },
+      {
+        id: '60',
+        type: 'multiple_choice',
+        question: 'How do you say "I’m lost" in Sundanese?',
+        options: ['Abdi leungit', 'Abdi kasasar', 'Abdi kapanggih', 'Abdi balik deui'],
+        correct_answer: 'Abdi kasasar'
+      },
+      {
+        id: '61',
+        type: 'multiple_choice',
+        question: 'What does "Ka dieu atanapi ka ditu?" mean?',
+        options: [
+          'Can I go here or there?',
+          'Go this way or that way?',
+          'Do you know this place?',
+          'Which one do you prefer?'
+        ],
+        correct_answer: 'Go this way or that way?'
+      },
+      {
+        id: '62',
+        type: 'drag_drop',
+        question: 'Match "Ka handap teras ka katuhu" with its meaning',
+        options: ['Ka handap teras ka katuhu', 'Go down then turn right'],
+        correct_answer: 'Go down then turn right'
+      },
+      {
+        id: '63',
+        type: 'multiple_choice',
+        question: 'How do you ask "Is it far from here?" in Sundanese?',
+        options: [
+          'Tiasa abdi angkat ayeuna?',
+          'Ti dieu tebihna sabaraha?',
+          'Ieu jalan nu leres?',
+          'Ti dieu ka ditu kumaha?'
+        ],
+        correct_answer: 'Ti dieu tebihna sabaraha?'
+      }
+    ]
+  },
+  {
+    id: '8',
+    language_id: '1',
+    title: 'Talking About Work',
+    description: 'Learn Sundanese words for talking about work',
+    level: 'Advanced',
+    order: 8,
+    xp_reward: 25,
+    is_completed: false,
+    questions: [
+      {
+        id: '64',
+        type: 'multiple_choice',
+        question: 'How do you say "I work at a hospital" in Sundanese?',
+        options: [
+          'Abdi damel di rumah sakit',
+          'Abdi cicing di rumah sakit',
+          'Abdi nginum di rumah sakit',
+          'Abdi nu dagang di rumah sakit'
+        ],
+        correct_answer: 'Abdi damel di rumah sakit'
+      },
+      {
+        id: '65',
+        type: 'multiple_choice',
+        question: 'What does "Abdi damel salaku guru" mean?',
+        options: [
+          'I work as a teacher',
+          'I go to school',
+          'I study with a teacher',
+          'I meet the teacher'
+        ],
+        correct_answer: 'I work as a teacher'
+      },
+      {
+        id: '66',
+        type: 'drag_drop',
+        question: 'Match "Bidang pagawéan abdi téh teknologi" with its meaning',
+        options: ['Bidang pagawéan abdi téh teknologi', 'My field of work is technology'],
+        correct_answer: 'My field of work is technology'
+      },
+      {
+        id: '67',
+        type: 'multiple_choice',
+        question: 'How do you say "What is your job?" in Sundanese?',
+        options: [
+          'Naon pagawéan anjeun?',
+          'Sabaraha gaji anjeun?',
+          'Kumaha tempat anjeun?',
+          'Ti mana anjeun asalna?'
+        ],
+        correct_answer: 'Naon pagawéan anjeun?'
+      },
+      {
+        id: '68',
+        type: 'multiple_choice',
+        question: 'What does "Abdi kakara ngamimitian damel anyar" mean?',
+        options: [
+          'I just finished a new job',
+          'I just started a new job',
+          'I am looking for a new job',
+          'I work every day'
+        ],
+        correct_answer: 'I just started a new job'
+      },
+      {
+        id: '69',
+        type: 'drag_drop',
+        question: 'Match the Sundanese phrase with its English meaning',
+        options: ['Abdi hoyong milari pagawéan', 'I want to look for a job'],
+        correct_answer: 'I want to look for a job'
+      },
+      {
+        id: '70',
+        type: 'multiple_choice',
+        question: 'How do you say "I am unemployed" in Sundanese?',
+        options: [
+          'Abdi keur libur',
+          'Abdi teu boga pagawéan',
+          'Abdi nu dagang',
+          'Abdi keur nyiar bumi'
+        ],
+        correct_answer: 'Abdi teu boga pagawéan'
+      },
+      {
+        id: '71',
+        type: 'multiple_choice',
+        question: 'What does "Abdi boga dua padamelan" mean?',
+        options: [
+          'I work in two offices',
+          'I have two jobs',
+          'I go to two places',
+          'I have two children'
+        ],
+        correct_answer: 'I have two jobs'
+      },
+      {
+        id: '72',
+        type: 'drag_drop',
+        question: 'Match "Dinten ayeuna seueur pagawean" with its meaning',
+        options: ['Dinten ayeuna seueur pagawean', 'Today there is a lot of work'],
+        correct_answer: 'Today there is a lot of work'
+      },
+      {
+        id: '73',
+        type: 'multiple_choice',
+        question: 'How do you say "My boss is kind" in Sundanese?',
+        options: [
+          'Pamingpin abdi garang',
+          'Nu gaduh kantor kasar',
+          'Bos abdi bageur',
+          'Bos abdi loba nyarios'
+        ],
+        correct_answer: 'Bos abdi bageur'
+      }
+    ]
+  },
+  {
+    id: '9',
+    language_id: '1',
+    title: 'Use Present Verbs',
+    description: 'Learn Sundanese words for use present verbs',
+    level: 'Advanced',
+    order: 9,
+    xp_reward: 25,
+    is_completed: false,
+    questions: [
+      {
+        id: '74',
+        type: 'multiple_choice',
+        question: 'How do you say "I am eating" in Sundanese?',
+        options: ['Abdi keur dahar', 'Abdi badé tuang', 'Abdi atos tuang', 'Abdi bade tuang'],
+        correct_answer: 'Abdi keur dahar'
+      },
+      {
+        id: '75',
+        type: 'multiple_choice',
+        question: 'What does "Anjeun keur maca buku" mean?',
+        options: ['You have a book', 'You are reading a book', 'You like books', 'You write a book'],
+        correct_answer: 'You are reading a book'
+      },
+      {
+        id: '76',
+        type: 'drag_drop',
+        question: 'Match the Sundanese phrase with its English meaning',
+        options: ['Maranéhna keur damel', 'They are working'],
+        correct_answer: 'They are working'
+      },
+      {
+        id: '77',
+        type: 'multiple_choice',
+        question: 'How do you say "She is cooking" in Sundanese?',
+        options: ['Manehna nu masak', 'Manehna keur masak', 'Manehna bade masak', 'Manehna tos masak'],
+        correct_answer: 'Manehna keur masak'
+      },
+      {
+        id: '78',
+        type: 'multiple_choice',
+        question: 'What does "Kami keur diajar basa Sunda" mean?',
+        options: [
+          'We speak Sundanese',
+          'We are teaching Sundanese',
+          'We are learning Sundanese',
+          'We forgot Sundanese'
+        ],
+        correct_answer: 'We are learning Sundanese'
+      },
+      {
+        id: '79',
+        type: 'drag_drop',
+        question: 'Match "Aranjeunna keur nginum kopi" with its meaning',
+        options: ['Aréhna keur nginum kopi', 'They are drinking coffee'],
+        correct_answer: 'They are drinking coffee'
+      },
+      {
+        id: '80',
+        type: 'multiple_choice',
+        question: 'How do you say "I am listening to music" in Sundanese?',
+        options: [
+          'Abdi ngadenge musik',
+          'Abdi keur ngadenge musik',
+          'Abdi bade ngadenge musik',
+          'Abdi atos ngadenge musik'
+        ],
+        correct_answer: 'Abdi keur ngadenge musik'
+      },
+      {
+        id: '81',
+        type: 'multiple_choice',
+        question: 'What does "Anjeun keur nyerat surat" mean?',
+        options: [
+          'You are writing a letter',
+          'You are reading a letter',
+          'You received a letter',
+          'You forgot the letter'
+        ],
+        correct_answer: 'You are writing a letter'
+      },
+      {
+        id: '82',
+        type: 'drag_drop',
+        question: 'Match the phrase "Abdi keur nyetir mobil" with its meaning',
+        options: ['Abdi keur nyetir mobil', 'I am driving a car'],
+        correct_answer: 'I am driving a car'
+      },
+      {
+        id: '83',
+        type: 'multiple_choice',
+        question: 'How do you say "They are playing" in Sundanese?',
+        options: [
+          'Maranéhna nu ulin',
+          'Maranéhna bade ulin',
+          'Maranéhna keur ulin',
+          'Maranéhna atos ulin'
+        ],
+        correct_answer: 'Maranéhna keur ulin'
+      }
+    ]
+  },
+  {
+    id: '10',
+    language_id: '1',
+    title: 'Talk About Party',
+    description: 'Learn Sundanese words for talk about party',
+    level: 'Advanced',
+    order: 10,
+    xp_reward: 25,
+    is_completed: false,
+    questions: [
+      {
+        id: '84',
+        type: 'multiple_choice',
+        question: 'How do you say "party" in Sundanese?',
+        options: ['Pesta', 'Pasar', 'Pintonan', 'Patugas'],
+        correct_answer: 'Pesta'
+      },
+      {
+        id: '85',
+        type: 'multiple_choice',
+        question: 'What does "Abdi badé ka pesta dinten ayeuna" mean?',
+        options: [
+          'I came from a party today',
+          'I am at the party now',
+          'I want to host a party today',
+          'I’m going to a party today'
+        ],
+        correct_answer: 'I’m going to a party today'
+      },
+      {
+        id: '86',
+        type: 'drag_drop',
+        question: 'Match "Di pesta aya musik jeung tuangeun" with its meaning',
+        options: ['Di pesta aya musik jeung tuangeun', 'At the party, there is music and food'],
+        correct_answer: 'At the party, there is music and food'
+      },
+      {
+        id: '87',
+        type: 'multiple_choice',
+        question: 'How do you say "I was invited to the party" in Sundanese?',
+        options: [
+          'Abdi diajak ka pesta',
+          'Abdi nyieun pesta',
+          'Abdi ningali pesta',
+          'Abdi ngalakukeun pesta'
+        ],
+        correct_answer: 'Abdi diajak ka pesta'
+      },
+      {
+        id: '88',
+        type: 'multiple_choice',
+        question: 'What does "Saha nu ulang taun?" mean?',
+        options: [
+          'Who is getting married?',
+          'Whose birthday is it?',
+          'Who came to the party?',
+          'Who is dancing?'
+        ],
+        correct_answer: 'Whose birthday is it?'
+      },
+      {
+        id: '89',
+        type: 'drag_drop',
+        question: 'Match "Pesta na rame pisan" with its meaning',
+        options: ['Pesta na rame pisan', 'The party was very lively'],
+        correct_answer: 'The party was very lively'
+      },
+      {
+        id: '90',
+        type: 'multiple_choice',
+        question: 'How do you say "Let’s dance!" in Sundanese?',
+        options: [
+          'Hayu urang dahar!',
+          'Hayu urang nari!',
+          'Hayu urang lumpat!',
+          'Hayu urang cicing!'
+        ],
+        correct_answer: 'Hayu urang nari!'
+      },
+      {
+        id: '91',
+        type: 'multiple_choice',
+        question: 'What does "Aya seueur kue ulang taun" mean?',
+        options: [
+          'There are many birthday gifts',
+          'There is a birthday invitation',
+          'There are many birthday cakes',
+          'There is a surprise birthday'
+        ],
+        correct_answer: 'There are many birthday cakes'
+      },
+      {
+        id: '92',
+        type: 'drag_drop',
+        question: 'Match the phrase "Abdi nyiapkeun dekorasi" with its meaning',
+        options: ['Abdi nyiapkeun dekorasi', 'I prepared the decorations'],
+        correct_answer: 'I prepared the decorations'
+      },
+      {
+        id: '93',
+        type: 'multiple_choice',
+        question: 'How do you say "Did you enjoy the party?" in Sundanese?',
+        options: [
+          'Sabaraha umur anjeun di pesta?',
+          'Naha anjeun resep kana pestana?',
+          'Pestana di bumi saha?',
+          'Anjeun dahar naon di pesta?'
+        ],
+        correct_answer: 'Naha anjeun resep kana pestana?'
+      }
+    ]
+  },
+  {
+    id: '10',
+    language_id: '1',
+    title: 'Talking About Food Prices',
+    description: 'Learn Sundanese words for talking about food prices',
+    level: 'Advanced',
+    order: 10,
+    xp_reward: 25,
+    is_completed: false,
+    questions: [
+      {
+        id: '94',
+        type: 'multiple_choice',
+        question: 'How do you say "How much is this?" in Sundanese?',
+        options: ['Sabaraha ieu?', 'Kumaha ieu?', 'Dimana ieu?', 'Naon ieu?'],
+        correct_answer: 'Sabaraha ieu?'
+      },
+      {
+        id: '95',
+        type: 'multiple_choice',
+        question: 'What does "Ieu mahal pisan" mean?',
+        options: [
+          'This is very expensive',
+          'This is very small',
+          'This is very hot',
+          'This is very salty'
+        ],
+        correct_answer: 'This is very expensive'
+      },
+      {
+        id: '96',
+        type: 'drag_drop',
+        question: 'Match "Abdi hoyong meuli dua" with its meaning',
+        options: ['Abdi hoyong meuli dua', 'I want to buy two'],
+        correct_answer: 'I want to buy two'
+      },
+      {
+        id: '97',
+        type: 'multiple_choice',
+        question: 'How do you say "This is cheap" in Sundanese?',
+        options: ['Ieu murah', 'Ieu amis', 'Ieu raos', 'Ieu panas'],
+        correct_answer: 'Ieu murah'
+      },
+      {
+        id: '98',
+        type: 'multiple_choice',
+        question: 'What does "Aya potongan harga?" mean?',
+        options: [
+          'Is there a price cut?',
+          'Where is the cashier?',
+          'Is it cooked?',
+          'Is it for free?'
+        ],
+        correct_answer: 'Is there a price cut?'
+      },
+      {
+        id: '99',
+        type: 'drag_drop',
+        question: 'Match "Hiji hargana sapuluh rébu" with its meaning',
+        options: ['Hiji hargana sapuluh rébu', 'One costs ten thousand'],
+        correct_answer: 'One costs ten thousand'
+      },
+      {
+        id: '100',
+        type: 'multiple_choice',
+        question: 'How do you say "Can I bargain?" in Sundanese?',
+        options: [
+          'Naha tiasa ditawar?', 'Abdi badé nyoba', 'Sabaraha sadayana?', 'Dimana tempatna?'
+        ],
+        correct_answer: 'Naha tiasa ditawar?'
+      },
+      {
+        id: '101',
+        type: 'multiple_choice',
+        question: 'What does "Abdi ngan boga lima rébu" mean?',
+        options: [
+          'I only have five thousand',
+          'I want five thousand',
+          'I will pay five thousand',
+          'I get five thousand change'
+        ],
+        correct_answer: 'I only have five thousand'
+      },
+      {
+        id: '102',
+        type: 'drag_drop',
+        question: 'Match "Harga na pas teu?" with its meaning',
+        options: ['Harga na pas teu?', 'Is the price right?'],
+        correct_answer: 'Is the price right?'
+      },
+      {
+        id: '103',
+        type: 'multiple_choice',
+        question: 'How do you say "The total is twenty-five thousand" in Sundanese?',
+        options: [
+          'Jumlahna dua puluh lima rébu',
+          'Abdi nyimpen dua puluh lima rébu',
+          'Hargana dua rébu salapan ratus',
+          'Bayarna lima rébu'
+        ],
+        correct_answer: 'Jumlahna dua puluh lima rébu'
+      }
+    ]
+  },
+  {
+    id: '11',
+    language_id: '1',
+    title: 'Commenting on Food and Drinks',
+    description: 'Learn Sundanese words for commenting food and drinks',
+    level: 'Advanced',
+    order: 11,
+    xp_reward: 25,
+    is_completed: false,
+    questions: [
+      {
+        id: '104',
+        type: 'multiple_choice',
+        question: 'How do you say "This food is delicious" in Sundanese?',
+        options: ['Ieu kadaharan raos pisan', 'Ieu kadaharan panas', 'Ieu kadaharan amis', 'Ieu kadaharan tiis'],
+        correct_answer: 'Ieu kadaharan raos pisan'
+      },
+      {
+        id: '105',
+        type: 'multiple_choice',
+        question: 'What does "Ieu kadaharan amis" mean?',
+        options: ['This food is sweet', 'This food is salty', 'This food is sour', 'This food is bitter'],
+        correct_answer: 'This food is sweet'
+      },
+      {
+        id: '106',
+        type: 'drag_drop',
+        question: 'Match "Ieu inuman seger pisan" with its meaning',
+        options: ['Ieu inuman seger pisan', 'This drink is very refreshing'],
+        correct_answer: 'This drink is very refreshing'
+      },
+      {
+        id: '107',
+        type: 'multiple_choice',
+        question: 'How do you say "The coffee is too bitter" in Sundanese?',
+        options: ['Kopina pait teuing', 'Kopina amis teuing', 'Kopina raos teuing', 'Kopina seger teuing'],
+        correct_answer: 'Kopina pait teuing'
+      },
+      {
+        id: '108',
+        type: 'multiple_choice',
+        question: 'What does "Teh na teu raos" mean?',
+        options: ['The tea is not tasty', 'The tea is very hot', 'The tea is too sweet', 'The tea is perfect'],
+        correct_answer: 'The tea is not tasty'
+      },
+      {
+        id: '109',
+        type: 'drag_drop',
+        question: 'Match "Nasi goréngna lada pisan" with its meaning',
+        options: ['Nasi goréngna lada pisan', 'The fried rice is very spicy'],
+        correct_answer: 'The fried rice is very spicy'
+      },
+      {
+        id: '110',
+        type: 'multiple_choice',
+        question: 'How do you say "The soup is too salty" in Sundanese?',
+        options: ['Sopna kabanyakan uyah', 'Sopna amis', 'Sopna pait', 'Sopna henteu asak'],
+        correct_answer: 'Sopna kabanyakan uyah'
+      },
+      {
+        id: '111',
+        type: 'multiple_choice',
+        question: 'What does "Ieu kadaharan henteu asak" mean?',
+        options: ['This food is not cooked', 'This food is cold', 'This food is perfect', 'This food is hot'],
+        correct_answer: 'This food is not cooked'
+      },
+      {
+        id: '112',
+        type: 'drag_drop',
+        question: 'Match the phrase "Ieu téh kadaharan karesep abdi" with its meaning',
+        options: ['Ieu téh kadaharan karesep abdi', 'This is my favorite food'],
+        correct_answer: 'This is my favorite food'
+      },
+      {
+        id: '113',
+        type: 'multiple_choice',
+        question: 'How do you say "I don’t like this drink" in Sundanese?',
+        options: [
+          'Abdi henteu resep kana ieu inuman',
+          'Abdi henteu nginum ayeuna',
+          'Abdi bade meuli inuman',
+          'Abdi hoyong nambahan inuman'
+        ],
+        correct_answer: 'Abdi henteu resep kana ieu inuman'
+      },
+      {
+        id: '114',
+        type: 'multiple_choice',
+        question: 'What does "Abdi hoyong nambahan deui" mean?',
+        options: [
+          'I want more',
+          'I am done eating',
+          'I dislike this',
+          'I want to leave'
+        ],
+        correct_answer: 'I want more'
+      },
+      {
+        id: '115',
+        type: 'drag_drop',
+        question: 'Match "Kadaharan ieu matak wareg" with its meaning',
+        options: ['Kadaharan ieu matak wareg', 'This food is filling'],
+        correct_answer: 'This food is filling'
+      },
+      {
+        id: '116',
+        type: 'multiple_choice',
+        question: 'How do you say "The drink is too sweet" in Sundanese?',
+        options: [
+          'Inumana amis teuing',
+          'Inumana pait teuing',
+          'Inumana hambar teuing',
+          'Inumana haneut teuing'
+        ],
+        correct_answer: 'Inumana amis teuing'
+      },
+      {
+        id: '117',
+        type: 'multiple_choice',
+        question: 'What does "Kadaharan na henteu hambar" mean?',
+        options: [
+          'The food is not bland',
+          'The food is too hot',
+          'The food is cold',
+          'The food is overcooked'
+        ],
+        correct_answer: 'The food is not bland'
+      },
+      {
+        id: '118',
+        type: 'drag_drop',
+        question: 'Match "Ieu kadaharan asak sampurna" with its meaning',
+        options: ['Ieu kadaharan asak sampurna', 'This food is perfectly cooked'],
+        correct_answer: 'This food is perfectly cooked'
       }
     ]
   }  

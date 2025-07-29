@@ -32,7 +32,7 @@ export const LanguageCard: React.FC<LanguageCardProps> = ({
       
       <div className="flex items-start justify-between mb-4">
         <div>
-          <div className="text-3xl mb-2">{language.pulau}</div>
+          <div className="text-3xl mb-2">{language.flag}</div>
           <h3 className="text-xl font-bold text-gray-900">{language.name}</h3>
           <p className="text-gray-600 text-sm mt-1">{language.description}</p>
         </div>
