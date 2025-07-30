@@ -2295,7 +2295,397 @@ export const batakBasicLessons: Lesson[] = [
     xp_reward: 10,
     is_completed: false,
     questions: [
-      
+      {
+        id: '1',
+        type: 'multiple_choice',
+        question: 'How do you say "Good morning" in Batak?',
+        options: ['Horas di ari', 'Horas di sian', 'Horas di bongi', 'Horas ma ito'],
+        correct_answer: 'Horas di ari'
+      },
+      {
+        id: '2',
+        type: 'multiple_choice',
+        question: 'What does "Horas" mean?',
+        options: ['Hello/Peace', 'Goodbye', 'Thank you', 'Good night'],
+        correct_answer: 'Hello/Peace'
+      },
+      {
+        id: '3',
+        type: 'drag_drop',
+        question: 'Match the Batak greeting with its meaning',
+        options: ['Horas ma ito', 'Hello to you'],
+        correct_answer: 'Hello to you'
+      }
+    ]
+  },
+  {
+    id: '2',
+    language_id: '3',
+    title: 'Order At a Cafe or Stall',
+    description: 'Learn Batak words for order at a cafe',
+    level: 'Beginner',
+    order: 2,
+    xp_reward: 15,
+    is_completed: false,
+    questions: [
+      {
+        id: '4',
+        type: 'multiple_choice',
+        question: 'How do you say "I want to order" in Batak?',
+        options: ['Au marhata kopi', 'Au marroha kopi', 'Au marpangido kopi', 'Au marlak kopi'],
+        correct_answer: 'Au marpangido kopi'
+      },
+      {
+        id: '5',
+        type: 'fill_blank',
+        question: 'Complete: "___ kopi sada, Bou." (One coffee, ma\'am)',
+        options: ['Tole', 'Bereken', 'Asa', 'Sian'],
+        correct_answer: 'Tole'
+      },
+      {
+        id: '6',
+        type: 'multiple_choice',
+        question: 'What is the Batak word for "drink"?',
+        options: ['Minum', 'Mangan', 'Boti', 'Roha'],
+        correct_answer: 'Minum'
+      },
+      {
+        id: '7',
+        type: 'fill_blank',
+        question: 'Complete: "Au ___ teh manis." (I drink sweet tea)',
+        options: ['mangan', 'minum', 'roha', 'boti'],
+        correct_answer: 'minum'
+      },
+      {
+        id: '8',
+        type: 'multiple_choice',
+        question: 'What does "mangan" mean?',
+        options: ['To buy', 'To eat', 'To drink', 'To order'],
+        correct_answer: 'To eat'
+      },
+      {
+        id: '9',
+        type: 'fill_blank',
+        question: 'Complete: "Au ___ bakso dua." (I want two meatballs)',
+        options: ['roha', 'boti', 'marpangido', 'mangan'],
+        correct_answer: 'roha'
+      },
+      {
+        id: '10',
+        type: 'multiple_choice',
+        question: 'How do you say "delicious" in Batak?',
+        options: ['Marsak', 'Mangalap', 'Mardahan', 'Mambahen'],
+        correct_answer: 'Marsak'
+      },
+      {
+        id: '11',
+        type: 'fill_blank',
+        question: 'Complete: "Gulai on ___ tarbona!" (This curry is very delicious!)',
+        options: ['mangalap', 'marsak', 'mardahan', 'marbere'],
+        correct_answer: 'marsak'
+      },
+      {
+        id: '12',
+        type: 'multiple_choice',
+        question: 'What is "please give me the menu" in Batak?',
+        options: ['Bereken ho au menu on', 'Au roha mangan', 'Tole mangan', 'Boti au kopi'],
+        correct_answer: 'Bereken ho au menu on'
+      },
+      {
+        id: '13',
+        type: 'fill_blank',
+        question: 'Complete: "___ teh anget sada, Tulang." (One hot tea, uncle)',
+        options: ['Boti', 'Roha', 'Bereken', 'Minum'],
+        correct_answer: 'Bereken'
+      }
+    ]
+  },
+  {
+    id: '3',
+    language_id: '3',
+    title: 'Family Members',
+    description: 'Learn Batak words for family',
+    level: 'Beginner',
+    order: 3,
+    xp_reward: 15,
+    is_completed: false,
+    questions: [
+      {
+        id: '14',
+        type: 'multiple_choice',
+        question: 'How do you say "mother" in Batak?',
+        options: ['Inang', 'Amang', 'Namboru', 'Baoa'],
+        correct_answer: 'Inang'
+      },
+      {
+        id: '15',
+        type: 'fill_blank',
+        question: 'Complete: My father is "___" in Batak',
+        options: ['Amang', 'Inang', 'Anggi', 'Abang'],
+        correct_answer: 'Amang'
+      },
+      {
+        id: '16',
+        type: 'multiple_choice',
+        question: 'What is "older brother" in Batak?',
+        options: ['Anggi', 'Abang', 'Inang', 'Dongan'],
+        correct_answer: 'Abang'
+      },
+      {
+        id: '17',
+        type: 'fill_blank',
+        question: 'Complete: "Younger sibling" is "___" in Batak',
+        options: ['Abang', 'Anggi', 'Namboru', 'Tulang'],
+        correct_answer: 'Anggi'
+      },
+      {
+        id: '18',
+        type: 'multiple_choice',
+        question: 'What is the Batak word for "grandfather"?',
+        options: ['Tulang', 'Namboru', 'Opung', 'Baoa'],
+        correct_answer: 'Opung'
+      },
+      {
+        id: '19',
+        type: 'fill_blank',
+        question: 'Complete: My grandmother is called "___"',
+        options: ['Opung boru', 'Opung laki', 'Namboru', 'Inang'],
+        correct_answer: 'Opung boru'
+      },
+      {
+        id: '20',
+        type: 'multiple_choice',
+        question: 'How do you say "aunt" in Batak?',
+        options: ['Tulang', 'Namboru', 'Anggi', 'Dongan'],
+        correct_answer: 'Namboru'
+      },
+      {
+        id: '21',
+        type: 'multiple_choice',
+        question: 'How do you say "uncle" in Batak?',
+        options: ['Namboru', 'Tulang', 'Abang', 'Opung'],
+        correct_answer: 'Tulang'
+      },
+      {
+        id: '22',
+        type: 'fill_blank',
+        question: 'Complete: "Sister" in Batak is "___"',
+        options: ['Ito', 'Anggi', 'Abang', 'Inang'],
+        correct_answer: 'Ito'
+      },
+      {
+        id: '23',
+        type: 'multiple_choice',
+        question: 'What is "wife" in Batak?',
+        options: ['Boru', 'Inang', 'Ito', 'Namboru'],
+        correct_answer: 'Boru'
+      }
+    ]
+  },
+  {
+    id: '4',
+    language_id: '3',
+    title: 'Get to Know and Greet Other People',
+    description: 'Learn Batak words for how to greet other people',
+    level: 'Intermediate',
+    order: 4,
+    xp_reward: 20,
+    is_completed: false,
+    questions: [
+      {
+        id: '24',
+        type: 'multiple_choice',
+        question: 'How do you say "Hello" politely in Batak?',
+        options: ['Halo', 'Horas di ari', 'Aha kabar', 'Horas ma ito'],
+        correct_answer: 'Horas ma ito'
+      },
+      {
+        id: '25',
+        type: 'fill_blank',
+        question: 'Complete: "___ goar mu?" (What is your name?)',
+        options: ['Goar', 'Aha', 'Ho', 'Sian'],
+        correct_answer: 'Aha'
+      },
+      {
+        id: '26',
+        type: 'multiple_choice',
+        question: 'What is "My name is..." in Batak?',
+        options: ['Goar hu...', 'Au goar...', 'Nami ku...', 'Goar ni au...'],
+        correct_answer: 'Goar hu...'
+      },
+      {
+        id: '27',
+        type: 'fill_blank',
+        question: 'Complete: "___ kabar mu?" (How are you?)',
+        options: ['Aha', 'Sian', 'Dia', 'Naso'],
+        correct_answer: 'Aha'
+      },
+      {
+        id: '28',
+        type: 'multiple_choice',
+        question: 'What is "I\'m fine, thank you" in Batak?',
+        options: ['Au marjolo, mauliate', 'Au sehat', 'Au marsak', 'Alhamdulillah elok'],
+        correct_answer: 'Au marjolo, mauliate'
+      },
+      {
+        id: '29',
+        type: 'fill_blank',
+        question: 'Complete: "___ kabar ni ho?" (How are you? - polite)',
+        options: ['Aha', 'Au', 'Dia', 'Kabar'],
+        correct_answer: 'Aha'
+      },
+      {
+        id: '30',
+        type: 'multiple_choice',
+        question: 'How do you say "Good morning" in Batak?',
+        options: ['Horas di bongi', 'Horas di ari', 'Horas di sian', 'Ari dope'],
+        correct_answer: 'Horas di ari'
+      },
+      {
+        id: '31',
+        type: 'multiple_choice',
+        question: 'How do you say "Good evening" in Batak?',
+        options: ['Horas di ari', 'Horas di sian', 'Horas di bongi', 'Horas wengi'],
+        correct_answer: 'Horas di bongi'
+      },
+      {
+        id: '32',
+        type: 'fill_blank',
+        question: 'Complete: "___ asal mu?" (Where are you from?)',
+        options: ['Sian', 'Asal', 'Dohot', 'Au'],
+        correct_answer: 'Sian'
+      },
+      {
+        id: '33',
+        type: 'multiple_choice',
+        question: 'How do you say "Nice to meet you" in Batak?',
+        options: ['Gabe jumpang ho', 'Horas rawuh', 'Au gabe', 'Asa jumpang'],
+        correct_answer: 'Gabe jumpang ho'
+      },
+      {
+        id: '34',
+        type: 'fill_blank',
+        question: 'Complete: "Au ___ sian Medan." (I am from Medan)',
+        options: ['asal', 'tiba', 'sian', 'roha'],
+        correct_answer: 'sian'
+      },
+      {
+        id: '35',
+        type: 'multiple_choice',
+        question: 'What is a polite way to greet an elder in Batak?',
+        options: ['Halo', 'Horas Opung', 'Aha kabar mu', 'Aha kabar'],
+        correct_answer: 'Horas Opung'
+      },
+      {
+        id: '36',
+        type: 'fill_blank',
+        question: 'Complete: "Horas di ___!" (Good night!)',
+        options: ['dalem', 'bongi', 'sian', 'ari'],
+        correct_answer: 'bongi'
+      }
+    ]
+  },
+  {
+    id: '5',
+    language_id: '3',
+    title: 'Introduce the Family',
+    description: 'Learn Batak words for introduce the family',
+    level: 'Intermediate',
+    order: 5,
+    xp_reward: 20,
+    is_completed: false,
+    questions: [
+      {
+        id: '37',
+        type: 'multiple_choice',
+        question: 'How do you say "This is my father" in Batak?',
+        options: ['On amang hu', 'On abang hu', 'On anggi hu', 'Ia amang hu'],
+        correct_answer: 'On amang hu'
+      },
+      {
+        id: '38',
+        type: 'fill_blank',
+        question: 'Complete: "On ___ inang hu." (This is my mother)',
+        options: ['amang', 'inang', 'inang hu', 'ito'],
+        correct_answer: 'inang hu'
+      },
+      {
+        id: '39',
+        type: 'multiple_choice',
+        question: 'What does "anggi hu" mean?',
+        options: ['My younger sibling', 'My uncle', 'My cousin', 'My mother'],
+        correct_answer: 'My younger sibling'
+      },
+      {
+        id: '40',
+        type: 'fill_blank',
+        question: 'Complete: "On ___ abang hu." (This is my older brother)',
+        options: ['abang', 'abang hu', 'dongan', 'tulang'],
+        correct_answer: 'abang hu'
+      },
+      {
+        id: '41',
+        type: 'multiple_choice',
+        question: 'How do you say "My sister is beautiful" in Batak?',
+        options: ['Anggi hu gadis', 'Abang hu bagus', 'Ito hu bagus', 'Ito hu gadis'],
+        correct_answer: 'Ito hu gadis'
+      },
+      {
+        id: '42',
+        type: 'fill_blank',
+        question: 'Complete: "Au adong ___ dua." (I have two siblings)',
+        options: ['sahit', 'anak', 'dongan tubu', 'inang'],
+        correct_answer: 'dongan tubu'
+      },
+      {
+        id: '43',
+        type: 'multiple_choice',
+        question: 'What is "anak" in English?',
+        options: ['Child', 'Parent', 'Uncle', 'Sister'],
+        correct_answer: 'Child'
+      },
+      {
+        id: '44',
+        type: 'fill_blank',
+        question: 'Complete: "Tulang hu ___ tarbona." (My uncle is very kind)',
+        options: ['ayem', 'becik', 'banter', 'madingin'],
+        correct_answer: 'madingin'
+      },
+      {
+        id: '45',
+        type: 'multiple_choice',
+        question: 'How do you say "My grandfather is from Balige" in Batak?',
+        options: ['Opung laki hu sian Balige', 'Opung sian Balige', 'Tulang hu Balige', 'Abang hu sian Balige'],
+        correct_answer: 'Opung laki hu sian Balige'
+      },
+      {
+        id: '46',
+        type: 'fill_blank',
+        question: 'Complete: "___ goar na si Uli." (Her name is Uli)',
+        options: ['Goar na', 'Goar hu', 'Goar mu', 'Au'],
+        correct_answer: 'Goar na'
+      },
+      {
+        id: '47',
+        type: 'multiple_choice',
+        question: 'What is the Batak word for "husband"?',
+        options: ['Laki', 'Boru', 'Abang', 'Dongan'],
+        correct_answer: 'Laki'
+      },
+      {
+        id: '48',
+        type: 'multiple_choice',
+        question: 'What is the Batak word for "wife"?',
+        options: ['Boru', 'Laki', 'Inang', 'Anggi'],
+        correct_answer: 'Boru'
+      },
+      {
+        id: '49',
+        type: 'fill_blank',
+        question: 'Complete: "Boru ___ guru." (My wife is a teacher)',
+        options: ['hu', 'na', 'mu', 'boru'],
+        correct_answer: 'hu'
+      }
     ]
   }
 ]
@@ -2311,7 +2701,397 @@ export const minangBasicLessons: Lesson[] = [
     xp_reward: 10,
     is_completed: false,
     questions: [
-      
+      {
+        id: '1',
+        type: 'multiple_choice',
+        question: 'How do you say "Good morning" in Minang?',
+        options: ['Salamaik pagi', 'Salamaik siang', 'Salamaik malam', 'Salamaik den'],
+        correct_answer: 'Salamaik pagi'
+      },
+      {
+        id: '2',
+        type: 'multiple_choice',
+        question: 'What does "Apo khabar?" mean?',
+        options: ['How are you?', 'Where are you going?', 'What is your name?', 'Are you hungry?'],
+        correct_answer: 'How are you?'
+      },
+      {
+        id: '3',
+        type: 'drag_drop',
+        question: 'Match the Minang greeting with its meaning',
+        options: ['Salamaik datang', 'Welcome'],
+        correct_answer: 'Welcome'
+      }
+    ]
+  },
+  {
+    id: '2',
+    language_id: '4',
+    title: 'Order At a Cafe or Stall',
+    description: 'Learn Minang words for order at a cafe',
+    level: 'Beginner',
+    order: 2,
+    xp_reward: 15,
+    is_completed: false,
+    questions: [
+      {
+        id: '4',
+        type: 'multiple_choice',
+        question: 'How do you say "I want to order" in Minang?',
+        options: ['Ambo niak pasan', 'Ambo makan', 'Ambo minum', 'Ambo bali'],
+        correct_answer: 'Ambo niak pasan'
+      },
+      {
+        id: '5',
+        type: 'fill_blank',
+        question: 'Complete: "___ kopi ciek, Uni." (One coffee, sister)',
+        options: ['Pasan', 'Ambo', 'Tolong', 'Bagi'],
+        correct_answer: 'Tolong'
+      },
+      {
+        id: '6',
+        type: 'multiple_choice',
+        question: 'What is the Minang word for "drink"?',
+        options: ['Minum', 'Makan', 'Pasan', 'Bali'],
+        correct_answer: 'Minum'
+      },
+      {
+        id: '7',
+        type: 'fill_blank',
+        question: 'Complete: "Ambo ___ teh maniah." (I drink sweet tea)',
+        options: ['makan', 'minum', 'pasan', 'bagi'],
+        correct_answer: 'minum'
+      },
+      {
+        id: '8',
+        type: 'multiple_choice',
+        question: 'What does "makan" mean?',
+        options: ['To buy', 'To eat', 'To drink', 'To order'],
+        correct_answer: 'To eat'
+      },
+      {
+        id: '9',
+        type: 'fill_blank',
+        question: 'Complete: "Ambo ___ bakso duo." (I want two meatballs)',
+        options: ['niak', 'bali', 'pasan', 'makan'],
+        correct_answer: 'niak'
+      },
+      {
+        id: '10',
+        type: 'multiple_choice',
+        question: 'How do you say "delicious" in Minang?',
+        options: ['Sedap', 'Panas', 'Asam', 'Maniah'],
+        correct_answer: 'Sedap'
+      },
+      {
+        id: '11',
+        type: 'fill_blank',
+        question: 'Complete: "Randang ko ___ bana!" (This rendang is very delicious!)',
+        options: ['asam', 'sedap', 'maniah', 'hambar'],
+        correct_answer: 'sedap'
+      },
+      {
+        id: '12',
+        type: 'multiple_choice',
+        question: 'What is "please give me the menu" in Minang?',
+        options: ['Tolong bagi menu', 'Ambo niak makan', 'Pasan makan', 'Bagi ambo kopi'],
+        correct_answer: 'Tolong bagi menu'
+      },
+      {
+        id: '13',
+        type: 'fill_blank',
+        question: 'Complete: "___ teh angek ciek, Uni." (One hot tea, sister)',
+        options: ['Bali', 'Niak', 'Tolong', 'Minum'],
+        correct_answer: 'Tolong'
+      }
+    ]
+  },
+  {
+    id: '3',
+    language_id: '4',
+    title: 'Family Members',
+    description: 'Learn Minang words for family',
+    level: 'Beginner',
+    order: 3,
+    xp_reward: 15,
+    is_completed: false,
+    questions: [
+      {
+        id: '14',
+        type: 'multiple_choice',
+        question: 'How do you say "mother" in Minang?',
+        options: ['Amak', 'Apak', 'Uni', 'Etek'],
+        correct_answer: 'Amak'
+      },
+      {
+        id: '15',
+        type: 'fill_blank',
+        question: 'Complete: My father is "___" in Minang',
+        options: ['Apak', 'Amak', 'Adiak', 'Kakak'],
+        correct_answer: 'Apak'
+      },
+      {
+        id: '16',
+        type: 'multiple_choice',
+        question: 'What is "older sibling" in Minang?',
+        options: ['Adiak', 'Kakak', 'Amak', 'Urang'],
+        correct_answer: 'Kakak'
+      },
+      {
+        id: '17',
+        type: 'fill_blank',
+        question: 'Complete: "Younger sibling" is "___" in Minang',
+        options: ['Kakak', 'Adiak', 'Etek', 'Mamak'],
+        correct_answer: 'Adiak'
+      },
+      {
+        id: '18',
+        type: 'multiple_choice',
+        question: 'What is the Minang word for "grandfather"?',
+        options: ['Mamak', 'Etek', 'Datuk', 'Inyiak'],
+        correct_answer: 'Datuk'
+      },
+      {
+        id: '19',
+        type: 'fill_blank',
+        question: 'Complete: My grandmother is called "___"',
+        options: ['Inyiak', 'Datuk', 'Etek', 'Amak'],
+        correct_answer: 'Inyiak'
+      },
+      {
+        id: '20',
+        type: 'multiple_choice',
+        question: 'How do you say "aunt" in Minang?',
+        options: ['Mamak', 'Etek', 'Adiak', 'Urang'],
+        correct_answer: 'Etek'
+      },
+      {
+        id: '21',
+        type: 'multiple_choice',
+        question: 'How do you say "uncle" in Minang?',
+        options: ['Etek', 'Mamak', 'Kakak', 'Datuk'],
+        correct_answer: 'Mamak'
+      },
+      {
+        id: '22',
+        type: 'fill_blank',
+        question: 'Complete: "Sister" in Minang is "___"',
+        options: ['Uni', 'Adiak', 'Kakak', 'Amak'],
+        correct_answer: 'Uni'
+      },
+      {
+        id: '23',
+        type: 'multiple_choice',
+        question: 'What is "wife" in Minang?',
+        options: ['Bini', 'Amak', 'Uni', 'Etek'],
+        correct_answer: 'Bini'
+      }
+    ]
+  },
+  {
+    id: '4',
+    language_id: '4',
+    title: 'Get to Know and Greet Other People',
+    description: 'Learn Minang words for how to greet other people',
+    level: 'Intermediate',
+    order: 4,
+    xp_reward: 20,
+    is_completed: false,
+    questions: [
+      {
+        id: '24',
+        type: 'multiple_choice',
+        question: 'How do you say "Hello" politely in Minang?',
+        options: ['Halo', 'Salamaik pagi', 'Apo khabar', 'Salamaik den'],
+        correct_answer: 'Salamaik den'
+      },
+      {
+        id: '25',
+        type: 'fill_blank',
+        question: 'Complete: "___ namo den?" (What is your name?)',
+        options: ['Namo', 'Apo', 'Ang', 'Siapo'],
+        correct_answer: 'Apo'
+      },
+      {
+        id: '26',
+        type: 'multiple_choice',
+        question: 'What is "My name is..." in Minang?',
+        options: ['Namo ambo...', 'Ambo namo...', 'Namo den...', 'Ambo ko...'],
+        correct_answer: 'Namo ambo...'
+      },
+      {
+        id: '27',
+        type: 'fill_blank',
+        question: 'Complete: "___ khabar den?" (How are you?)',
+        options: ['Apo', 'Siapo', 'Di', 'Ndak'],
+        correct_answer: 'Apo'
+      },
+      {
+        id: '28',
+        type: 'multiple_choice',
+        question: 'What is "I\'m fine, thank you" in Minang?',
+        options: ['Ambo baiak, tarimo kasiah', 'Ambo sehat', 'Ambo rancak', 'Alhamdulillah elok'],
+        correct_answer: 'Ambo baiak, tarimo kasiah'
+      },
+      {
+        id: '29',
+        type: 'fill_blank',
+        question: 'Complete: "___ khabar den?" (How are you? - polite)',
+        options: ['Apo', 'Ambo', 'Siapo', 'Khabar'],
+        correct_answer: 'Apo'
+      },
+      {
+        id: '30',
+        type: 'multiple_choice',
+        question: 'How do you say "Good morning" in Minang?',
+        options: ['Salamaik malam', 'Salamaik pagi', 'Salamaik siang', 'Pagi jo'],
+        correct_answer: 'Salamaik pagi'
+      },
+      {
+        id: '31',
+        type: 'multiple_choice',
+        question: 'How do you say "Good evening" in Minang?',
+        options: ['Salamaik pagi', 'Salamaik siang', 'Salamaik malam', 'Salamaik sore'],
+        correct_answer: 'Salamaik malam'
+      },
+      {
+        id: '32',
+        type: 'fill_blank',
+        question: 'Complete: "___ asal den?" (Where are you from?)',
+        options: ['Dari', 'Asal', 'Di', 'Ambo'],
+        correct_answer: 'Dari'
+      },
+      {
+        id: '33',
+        type: 'multiple_choice',
+        question: 'How do you say "Nice to meet you" in Minang?',
+        options: ['Rancak batamu jo den', 'Salamaik datang', 'Ambo rancak', 'Baiak batamu'],
+        correct_answer: 'Rancak batamu jo den'
+      },
+      {
+        id: '34',
+        type: 'fill_blank',
+        question: 'Complete: "Ambo ___ dari Padang." (I am from Padang)',
+        options: ['asal', 'tibo', 'dari', 'niak'],
+        correct_answer: 'dari'
+      },
+      {
+        id: '35',
+        type: 'multiple_choice',
+        question: 'What is a polite way to greet an elder in Minang?',
+        options: ['Halo', 'Salamaik Datuk', 'Apo khabar den', 'Apo khabar'],
+        correct_answer: 'Salamaik Datuk'
+      },
+      {
+        id: '36',
+        type: 'fill_blank',
+        question: 'Complete: "Salamaik ___!" (Good night!)',
+        options: ['siang', 'malam', 'sore', 'pagi'],
+        correct_answer: 'malam'
+      }
+    ]
+  },
+  {
+    id: '5',
+    language_id: '4',
+    title: 'Introduce the Family',
+    description: 'Learn Minang words for introduce the family',
+    level: 'Intermediate',
+    order: 5,
+    xp_reward: 20,
+    is_completed: false,
+    questions: [
+      {
+        id: '37',
+        type: 'multiple_choice',
+        question: 'How do you say "This is my father" in Minang?',
+        options: ['Iko apak ambo', 'Iko kakak ambo', 'Iko adiak ambo', 'Itu apak ambo'],
+        correct_answer: 'Iko apak ambo'
+      },
+      {
+        id: '38',
+        type: 'fill_blank',
+        question: 'Complete: "Iko ___ amak ambo." (This is my mother)',
+        options: ['apak', 'amak', 'amak ambo', 'uni'],
+        correct_answer: 'amak ambo'
+      },
+      {
+        id: '39',
+        type: 'multiple_choice',
+        question: 'What does "adiak ambo" mean?',
+        options: ['My younger sibling', 'My uncle', 'My cousin', 'My mother'],
+        correct_answer: 'My younger sibling'
+      },
+      {
+        id: '40',
+        type: 'fill_blank',
+        question: 'Complete: "Iko ___ kakak ambo." (This is my older sibling)',
+        options: ['kakak', 'kakak ambo', 'urang', 'mamak'],
+        correct_answer: 'kakak ambo'
+      },
+      {
+        id: '41',
+        type: 'multiple_choice',
+        question: 'How do you say "My sister is beautiful" in Minang?',
+        options: ['Adiak ambo cantiak', 'Kakak ambo rancak', 'Uni ambo rancak', 'Uni ambo cantiak'],
+        correct_answer: 'Uni ambo cantiak'
+      },
+      {
+        id: '42',
+        type: 'fill_blank',
+        question: 'Complete: "Ambo ado ___ duo." (I have two siblings)',
+        options: ['sahit', 'anak', 'urang tubo', 'amak'],
+        correct_answer: 'urang tubo'
+      },
+      {
+        id: '43',
+        type: 'multiple_choice',
+        question: 'What is "anak" in English?',
+        options: ['Child', 'Parent', 'Uncle', 'Sister'],
+        correct_answer: 'Child'
+      },
+      {
+        id: '44',
+        type: 'fill_blank',
+        question: 'Complete: "Mamak ambo ___ bana." (My uncle is very kind)',
+        options: ['rancak', 'baiak', 'gancang', 'tinggi'],
+        correct_answer: 'baiak'
+      },
+      {
+        id: '45',
+        type: 'multiple_choice',
+        question: 'How do you say "My grandfather is from Bukittinggi" in Minang?',
+        options: ['Datuk ambo dari Bukittinggi', 'Datuk dari Bukittinggi', 'Mamak ambo Bukittinggi', 'Kakak ambo dari Bukittinggi'],
+        correct_answer: 'Datuk ambo dari Bukittinggi'
+      },
+      {
+        id: '46',
+        type: 'fill_blank',
+        question: 'Complete: "___ namo inyo si Siti." (Her name is Siti)',
+        options: ['Namo inyo', 'Namo ambo', 'Namo den', 'Ambo'],
+        correct_answer: 'Namo inyo'
+      },
+      {
+        id: '47',
+        type: 'multiple_choice',
+        question: 'What is the Minang word for "husband"?',
+        options: ['Laki', 'Bini', 'Kakak', 'Urang'],
+        correct_answer: 'Laki'
+      },
+      {
+        id: '48',
+        type: 'multiple_choice',
+        question: 'What is the Minang word for "wife"?',
+        options: ['Bini', 'Laki', 'Amak', 'Adiak'],
+        correct_answer: 'Bini'
+      },
+      {
+        id: '49',
+        type: 'fill_blank',
+        question: 'Complete: "Bini ___ guru." (My wife is a teacher)',
+        options: ['ambo', 'inyo', 'den', 'bini'],
+        correct_answer: 'ambo'
+      }
     ]
   }
 ]
