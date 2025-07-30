@@ -2042,12 +2042,12 @@ export const sundaneseBasicLessons: Lesson[] = [
     ]
   },
   {
-    id: '10',
+    id: '11',
     language_id: '1',
     title: 'Talking About Food Prices',
     description: 'Learn Sundanese words for talking about food prices',
     level: 'Advanced',
-    order: 10,
+    order: 11,
     xp_reward: 25,
     is_completed: false,
     questions: [
@@ -2146,12 +2146,12 @@ export const sundaneseBasicLessons: Lesson[] = [
     ]
   },
   {
-    id: '11',
+    id: '12',
     language_id: '1',
     title: 'Commenting on Food and Drinks',
     description: 'Learn Sundanese words for commenting food and drinks',
     level: 'Advanced',
-    order: 11,
+    order: 12,
     xp_reward: 25,
     is_completed: false,
     questions: [
