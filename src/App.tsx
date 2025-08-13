@@ -25,7 +25,7 @@ const AppContent: React.FC = () => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="text-6xl mb-4 animate-bounce">
+          <div className="text-6xl mb-4">
           <DotLottieReact
       src="https://lottie.host/5c990c19-1437-49c7-87c9-c5d85384257a/MvpCI9te9M.lottie"
       loop
