@@ -7,7 +7,7 @@ import { DashboardPage } from './pages/DashboardPage'
 import { LearnPage } from './pages/LearnPage'
 import { GamesPage } from './pages/GamesPage'
 import { ProfilePage } from './pages/ProfilePage'
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';  
 
 type PageType = 'dashboard' | 'learn' | 'games' | 'profile'
 
